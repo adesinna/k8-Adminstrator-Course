@@ -1,0 +1,36 @@
+The aim of kubernetes is to deliver you application in form of containers, it does these by using a master node and some
+worker nodes.
+
+Docker vs container-d:
+    K8 was built to orchestrate docker containers, but as it grew in popularity, other containers also wanted to work
+    k8. Now they built Container Runtime Interface(CRI) for every container runtime that comply with Open Container Initiative(OCI),
+    but  CRI did not work with docker, since docker was built way before CRI. Container-d is what docker is built on and or any
+    other container runtime is built on.
+    Using crictl instead of docker in the commands will work for other container runtime.
+
+
+
+ETCD:
+    This is a distributed key-value store that is Simple, Secure and Fast.
+    Every information you get about the objects in k8 are stored and gotten from the
+    ETCD server. It stores information like python dictionary.
+
+
+
+
+Kube-API Server:
+    This is the primary manages the communication between CLI and cluster.
+
+
+Kube-controller Manager:
+    It monitors the state of the nodes and rectifies the problem.
+        Node Controller:
+            Checks the health of the nodes and reassign the pods to the healthy ones if the current node fails
+
+        Replication Controller:
+            Makes sure the replicate set is maintained.
+
+
+
+
+
