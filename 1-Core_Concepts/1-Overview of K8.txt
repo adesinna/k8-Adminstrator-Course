@@ -40,5 +40,6 @@ Kubelet:
 Kube-Proxy:
     This is the network of the worker node.
 
-
+Container Runtime Engine:
+    This is what deploys the container on the worker node, the kubelet instructs it.
 
