@@ -30,3 +30,10 @@ Types of services:
 There is always a service in front of pods that routes the traffic, it has the frontend port which the port of the service,
 and a backend port which is the port of the pods. It knows the appropriate baackend port to route the request to by
 using labels.
+
+
+kubectl get svc
+
+kubectl describe svc name_of_svc
+
+kubectl delete svc name_of_svc
