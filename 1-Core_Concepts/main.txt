@@ -31,6 +31,14 @@ Kube-controller Manager:
             Makes sure the replicate set is maintained.
 
 
+Kube Scheduler:
+    They decide which pod goes on which node based on some set of rules given by the nodes.
+
+Kubelet:
+    It listens for instruction from the kube-api, also reports back to it.
+
+Kube-Proxy:
+    This is the network of the worker node.
 
 
 
