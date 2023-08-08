@@ -1,0 +1,40 @@
+Every pod needs an amount of resources for it to run on the node.
+
+Resources are the needed memory and cpus the pod needs, the limit is the maximum resources it can use on a node.
+
+The scheduler looks for a node that have this resource available, the limit is the max it can consume.
+
+The best is to just set request without using limits.
+
+Limit range would affect all the pods in the namespace
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: resource-limits
+spec:
+  limits:
+  - type: Container
+    default:
+      memory: 512Mi
+      cpu: 500m
+    defaultRequest:
+      memory: 256Mi
+      cpu: 100m
+    max:
+      memory: 2Gi
+      cpu: 2
+
+You can always set limit on nodes too in the namespace
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resource-quota
+spec:
+  hard:
+    requests.cpu: "2"
+    requests.memory: 4Gi
+    limits.cpu: "4"
+    limits.memory: 8Gi
+    pods: "10"
