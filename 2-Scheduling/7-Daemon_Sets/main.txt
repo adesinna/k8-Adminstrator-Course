@@ -1,0 +1,10 @@
+They help you run one copy of the pod is on all the nodes.
+
+They are like replica sets they create a replica of a pod on every node, like kube-proxy of each worker nodes
+
+They use node affinity rules
+
+kubectl get daemonsets
+
+kubectl describe daemonsets name_of_daemonset
+
