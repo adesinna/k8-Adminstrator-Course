@@ -1,0 +1,5 @@
+The component can have different version, but the kube-api-server must be higher.
+
+Kubectl can be higher or lower than kube-api
+
+kubeadm upgrade plan # shows
