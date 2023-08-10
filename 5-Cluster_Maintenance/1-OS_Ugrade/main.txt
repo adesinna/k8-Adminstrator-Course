@@ -1,0 +1,15 @@
+There are times you might need to take down a node.
+
+
+When a node is not coming up, we can drain the node of its pods, so they can be created
+on another node.
+
+kubectl drain node_name
+
+Now when the node is rebooted, you can schedule pods on it
+
+kubectl uncordon node_name # allowed it to be scheduled
+
+kubectl cordon node_name # makes sure that pods are not scheduled on the npde
+
+kubectl get pods -o wide # to see the node these pods are
