@@ -32,10 +32,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/1-Core_Concepts/Some objects in K8/5-Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/6-Security/1-Authentication" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/6-Security/1-Authentication" />
       <recent name="$PROJECT_DIR$/1-Core_Concepts/Some objects in K8/5-Services" />
       <recent name="$PROJECT_DIR$/1-Core_Concepts/1-Objects in K8" />
     </key>
