@@ -9,7 +9,7 @@ requiredDuringSchedulingIgnoredDuringExecution
 
 preferredDuringSchedulingIgnoredDuringExecution
 
-    This dont mind whether the labels of the nodes exist, and if something changes the
+    This dont mind whether the labels of the nodes exist (it will place it anywhere), and if something changes the
     label of the node when is running it will keep running
 
 requiredDuringSchedulingRequiredDuringExecution
