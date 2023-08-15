@@ -15,12 +15,16 @@ ETCD:
     This is a distributed key-value store that is Simple, Secure and Fast.
     Every information you get about the objects in k8 are stored and gotten from the
     ETCD server. It stores information like python dictionary.
+    If kubeadm is used to set up the k8 cluster, then it deploys the etcd server as a pod in the namespace kube-system.
+
 
 
 
 
 Kube-API Server:
     This is the primary manages the communication between CLI and cluster.
+    It is deployed as a pod when we use kubeadm, the authentication certificates is in the set ups(we do more of this later)
+    kubectl get pods -n kube-system # you see all the components
 
 
 Kube-controller Manager:
@@ -31,6 +35,9 @@ Kube-controller Manager:
         Replication Controller:
             Makes sure the replicate set is maintained.
 
+    To see the things the controller is managing go to
+
+    /etc/kubernetes/manifests/kube-controller-manager.yaml
 
 Kube Scheduler:
     They decide which pod goes on which node based on some set of rules given by the nodes.
@@ -44,3 +51,8 @@ Kube-Proxy:
 Container Runtime Engine:
     This is what deploys the container on the worker node, the kubelet instructs it.
 
+
+
+# or any other one to see the process
+
+Kubelet is not automatically downloaded when using kubeadm, so you must use binary

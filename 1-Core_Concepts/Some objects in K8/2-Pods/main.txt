@@ -28,3 +28,7 @@ Debugging Pods:
 kubectl logs name_of_pod # to see the logs in the pod container
 
 
+
+kubectl run nginx --image nginx # this creates a pod
+
+
