@@ -33,3 +33,6 @@ kubectl taint nodes node_name key=value:taint-effect
 kubectl describe node node01 | grep -i Taint # to see the taint on a node
 
 kubectl taint nodes node_name key=value:taint-effect- # notice the -, it is to remove the taint
+
+Taints on nodes does not guarantee that the pod with its toleration will be placed on it, because it can try
+another nodes before trying it.
