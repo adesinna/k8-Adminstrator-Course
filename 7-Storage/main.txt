@@ -1,0 +1,30 @@
+Docker Storage:
+    i. Storage Drivers
+    ii. Volume Drivers
+
+
+How do docker store data:
+    When you install docker, it creates a folder /var/lib/docker
+    It stores all files, like aufs, containers, image, volumes.
+
+    When docker creates a container, it add its on the read-write layer of the build, which
+    gets deleted when the container gets deleted. But if you want to persist the data
+
+    docker volume create data_volume
+
+    docker run -v data_volume:/var/lib/mysql mysql
+
+    Bind mounting is when the persistent data is in another location
+
+    docker run -v /data/mysql:/var/lib/mysql mysql
+
+    Storages drivers are used to do all this mounting of images and containers
+
+
+
+Storage Driver vs Volume Drivers:
+    They help manages storage on images and containers, volumes are managed by volume driver plugins
+
+
+Container Storage Interface:
+    These are drivers that can be integrated with k8s, so you can have your own storage.
