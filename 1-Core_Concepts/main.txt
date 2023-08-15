@@ -6,7 +6,8 @@ Docker vs container-d:
     k8. Now they built Container Runtime Interface(CRI) for every container runtime that comply with Open Container Initiative(OCI),
     but  CRI did not work with docker, since docker was built way before CRI. Container-d is what docker is built on and or any
     other container runtime is built on.
-    Using crictl instead of docker in the commands will work for other container runtime.
+    Using crictl instead of docker in the commands will work for other container runtime. It is also aware of pods
+
 
 
 
