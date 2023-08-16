@@ -14,7 +14,6 @@ In this example, we've defined a LimitRange named my-limit-range with various re
 
 Once you've created this YAML definition, you can apply it to your Kubernetes cluster using the kubectl apply command:
 
-sh
 kubectl apply -f your-limit-range.yaml
 
 
