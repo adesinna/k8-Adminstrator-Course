@@ -10,7 +10,7 @@ spec:
       env:
         - name: MY_USERNAME
           valueFrom:
-            secretKeyRef:
+            secretKeyRef:   #configMapKeyRef for configmap
               name: my-secret
               key: username
         - name: MY_PASSWORD
