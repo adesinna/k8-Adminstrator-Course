@@ -6,7 +6,7 @@ They use node affinity rules
 
 kubectl get daemonsets
 
-kubectl describe daemonsets name_of_daemonset
+kubectl describe daemonsets name_of_daemonset -n name_space
 
 kubectl get daemonsets --all-namespaces
 
