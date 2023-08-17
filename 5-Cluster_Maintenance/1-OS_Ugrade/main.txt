@@ -17,3 +17,6 @@ kubectl uncordon node_name # allowed it to be scheduled, by removing the restric
 kubectl cordon node_name # makes sure that pods are not scheduled on the node, but it does not terminate or remove existing pods on the node
 
 kubectl get pods -o wide # to see the node these pods are
+
+
+kubectl drain node01 --ignore-daemonsets # because it wont drain the daemonsets
