@@ -10,3 +10,5 @@ kubectl get secrets secret_name -o yaml # to see the value
 
 echo -n "your-username" | base64 --decode
 echo -n "your-password" | base64  --decode
+
+echo -n "password123" | base64

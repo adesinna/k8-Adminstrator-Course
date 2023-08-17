@@ -10,18 +10,11 @@ spec:
       env:
         - name: MY_USERNAME
           valueFrom:
-            secretKeyRef:   #configMapKeyRef for configmap
+            configMapKeyRef:
               name: my-secret
               key: username
         - name: MY_PASSWORD
           valueFrom:
-            secretKeyRef:
+            configMapKeyRef:
               name: my-secret
               key: password
-      volumeMounts:
-        - name: secret-volume
-          mountPath: "/secrets"
-  volumes:
-    - name: secret-volume
-      secret:
-        secretName: my-secret
