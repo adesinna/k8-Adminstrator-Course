@@ -42,3 +42,4 @@ The server also needs a certificate from the user to be sure that the client is 
 
 All these are called PKI (public key infrastructure)
 
+key is always in private key extension.
