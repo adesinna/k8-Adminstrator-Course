@@ -22,7 +22,8 @@ Authentication Mechanism:
     this file with have 3 columns.
     password user userid (group)
 
-    --basic-auth-file=list.csv
+    --basic-auth-file=list.csv  # this will be passed as an option in the kube-api config file
+
 
 2. Static Token File
 
@@ -36,4 +37,4 @@ So when you want to access the kube api server
 
 curl -v -k https://master-node-ip/api/v1/pods -u "user1:password1"
 
-This is not the best approach tho
+This is not the best approach.
