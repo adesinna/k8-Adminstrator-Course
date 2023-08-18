@@ -42,4 +42,12 @@ The server also needs a certificate from the user to be sure that the client is 
 
 All these are called PKI (public key infrastructure)
 
-key is always in private key extension.
+key is always in private key extension. While public key do not.
+
+The certificates that servers use for verification are called server certificates
+
+The certificates that CA use for verification are called root certificates
+
+The certificates that clients use for verification are called client certificates
+
+Since the client, and CA uses the same method.
