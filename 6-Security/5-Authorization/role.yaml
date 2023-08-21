@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: your-namespace  # Replace with the desired namespace
+  name: role-yaml
+rules:
+- apiGroups: [""]  # the type of api version
+  resources: ["pods"] # the resources
+  verbs: ["get", "list"] # what they can do
+- apiGroups: [""]
+  resources: ["configmaps"]  # Corrected resource name to lowercase
+  verbs: ["get", "list", "create", "delete", "describe"]
+  resourceNames: ["pod1", "pod2"] # this is for restricted pod
