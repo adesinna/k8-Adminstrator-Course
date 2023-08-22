@@ -1,0 +1,16 @@
+Humans use user accounts, apis and bots uses service accounts.
+
+kubectl create serviceaccount name_of_account
+
+kubectl get serviceaccounts
+
+
+When you create a service account, it creates a token that the api will use to authenticate it.
+
+If the bot is a pod in the secret generated can be mounted as volume for easy authentication.
+
+There is always a default service account for each namespace. The apiserver can use this to query the pods
+
+
+
+
