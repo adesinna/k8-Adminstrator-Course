@@ -1,0 +1,8 @@
+File System:
+When you install docker it creates this file where it stores its data
+
+/var/lib/docker/
+    aufs
+    containers
+    image
+    volumes
