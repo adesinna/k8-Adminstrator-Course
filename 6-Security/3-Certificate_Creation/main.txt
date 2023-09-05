@@ -13,12 +13,12 @@ openssl x509 -req in ca.csr -signkey ca.key -out ca.crt  # signed certificate
 
 Client Certificate:
 
-Kubelet Certificate:
+Admin user Certificate:
 openssl genrsa -out admin.key 2048 # private
 
 openssl req -new -key admin.key -subj "/CN=kube-admin/O=system:master" -out admin.csr # public crt with group system:masters (for admin), which is a must
 
-openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt
+openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt #signed crt
 
 
 All the alternative names for a server can be passed in the [alt_names] field in the configuration file.
@@ -27,8 +27,14 @@ All the alternative names for a server can be passed in the [alt_names] field in
 
 
 In the ca, all system components must be prefixed with system
-CN=SYSTEM:KUBE-CONTROLLER-MANAGER
+CN=SYSTEM:KUBE-CONTROLLER-MANAGER # same for KUBE-SCHEDULER, KUBE-PROXY
 
+
+The ca root crt, should be in all the components both clients and servers
+
+for kubelets, they are named after their nodes
+
+system:node:node2 #format group system:nodes
 
 We use this certificates to get into our cluster
 

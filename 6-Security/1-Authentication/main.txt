@@ -1,10 +1,10 @@
 This will show us how to secure our cluster.
 
-Who can access the cluster, and what they can do.
+Who can access the cluster like admins, developer and bots, and what they can do.
 
 Admins, Developers and Bots(like API integrations)
 
-Authentication Mechanism:
+Authentication Mechanism used by the kube API:
     It can be different ways such as
 
         Static Password File
@@ -23,7 +23,7 @@ Authentication Mechanism:
     password user userid (group)
 
     --basic-auth-file=list.csv  # this will be passed as an option in the kube-api config file
-
+    # this will be passed as a command option in kube adm
 
 2. Static Token File
 
@@ -31,7 +31,7 @@ Authentication Mechanism:
     this file with have 3 columns.
     token user userid (group)
 
-    --token-auth-file=list.csv
+    --token-auth-file=list-token.csv
 
 So when you want to access the kube api server
 

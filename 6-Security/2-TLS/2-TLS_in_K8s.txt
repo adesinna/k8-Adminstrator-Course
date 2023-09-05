@@ -28,7 +28,7 @@ Clients
 
 ClientName           Keys             Server
 
-kubectl          admin.crt admin.key    Kube-api
+admin via kubectl   admin.crt admin.key    Kube-api
 
 kube-scheduler   scheduler.crt scheduler.key    Kube-api
 
