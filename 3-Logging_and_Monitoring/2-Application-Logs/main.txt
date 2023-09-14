@@ -4,4 +4,4 @@ This will show you the live events of the pods
 
 if it has multiple conatiners, specify the pod name
 
-kubectl logs -f pod_name container_name
+kubectl logs -f pod_name container_name # if there are more than one container!

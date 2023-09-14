@@ -29,3 +29,7 @@ kubectl apply -f deployment.yaml
 kubectl rollout undo deployment/deployment_name # to undo a change, this brings the older one up
 
 
+kubectl rollout restart deployment/<deployment-name>
+
+
+

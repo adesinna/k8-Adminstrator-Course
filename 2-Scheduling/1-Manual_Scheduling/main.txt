@@ -5,8 +5,5 @@ See 1-node_name.yaml as an example
 
 
 Suppose the pod is created and there is no scheduler, the k8 will not allow you to use nodeName to assign pod to a node,
-instead, you will create a binding object and send a post request the binding api in a json format.
-
-Example of a binding object,
-
+instead, you will create a binding object and send a post request the binding api in a json format
 
