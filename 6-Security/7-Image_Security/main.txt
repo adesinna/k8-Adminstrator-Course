@@ -1,2 +1,0 @@
-To access a private registry,
-create a docker secret using registry-secret and apply it in the pod.

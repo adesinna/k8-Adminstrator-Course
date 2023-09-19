@@ -25,6 +25,8 @@ Authentication Mechanism used by the kube API:
     --basic-auth-file=list.csv  # this will be passed as an option in the kube-api config file
     # this will be passed as a command option in kube adm
 
+
+
 2. Static Token File
 
     We can create a list of users in a csv file,
